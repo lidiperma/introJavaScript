@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//ES" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="es">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta charset="UTF-8">
+    <title>Visor Prueba de Mensajes</title>
+    <style>
+        #popMsg {
+            /*Mensajes*/
+            position: absolute;
+            margin-top: 100px;
+            margin-left: 160px;
+            width: 222px;
+            height: auto;
+            padding: 0px 12px 20px 12px;
+            border: 2px solid #000075;
+            background-color: #f4f4f4;
+            opacity: 1;
+            border-radius: 10px;
+            font-style: italic;
+            line-height: normal;
+            font-family: Verdana, Geneva, sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            color: #000062;
+            text-transform: none;
+        }
+        
+        .close {
+            background-color: #cc6600;
+            height: 20px;
+            width: 22px;
+            top: -10px;
+            line-height: 20px;
+            position: absolute;
+            right: 8px;
+            text-align: center;
+            text-decoration: none;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .close:before {
+            color: #fff;
+            content: "X";
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+        }
+        
+        .close:hover {
+            background-color: #cc9900;
+        }
+    </style>
+
+    <script type="text/javascript">
+        function vMsg(texto) {
+            frm = document.forms[0];
+            if (texto.length) {
+                for (i = 0; ele = frm.elements[i]; i++) {
+                    ele.disabled = true;
+                }
+                document.getElementById("mens").innerHTML = texto;
+                document.getElementById("popMsg").style.visibility = 'visible';
+            } else {
+                document.getElementById("popMsg").style.visibility = 'hidden';
+                for (i = 0; ele = frm.elements[i]; i++) {
+                    ele.disabled = false;
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="popMsg">
+        <div id="mens" style="text-align:center;"></div>
+        <a class="close" onclick="vMsg('')"></a>
+        <script type="text/javascript">
+            vMsg("");
+        </script>
+    </div>
+    <form name="formI" id="formI" action="">
+        <input type="button" id="btn" name="btn" value='Mostrar Mensaje' onclick="vMsg('Mensaje de Prueba')" />
+    </form>
+</body>
+
+</html>

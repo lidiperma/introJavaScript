@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="js/funciones.js" type="text/javascript"></script>
+    </head>
+    <body>
+
+        <p id="dispara">
+            Alternando color y visibilidad
+        </p>
+        
+        <button id="btn1">Mostrar</button>
+        
+         <p onmousedown="blue(this)" onmouseup="blue2(this)" 
+            onmousemove="aparece(this)">
+            Me pongo rojo y me escondo
+         </p>
+
+
+
+
+
+
+        <p id="cambioColor" onclick="changeColor(this, 'red')" ondblclick="changeColor(this, 'blue')">HABIA UNA UN CIRCO</p>
+        <script>
+            //dos eventos una misma funcion
+            /*function dispara(elmnt,clr) {
+             elmnt.style.color = clr;
+             }*/
+
+            /*function changeColor(elParrafo, color){
+             elParrafo.style.color=color;
+             elParrafo.style.visibility="hidden";
+     
+             }*/
+        </script>
+
+    </body>
+</html>

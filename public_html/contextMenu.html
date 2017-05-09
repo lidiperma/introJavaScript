@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="estilos/style.css" rel="stylesheet" type="text/css"/>
+    <script src="js/funciones.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div class="menu" oncontextmenu="myFunction()" contextmenu="mymenu">
+    <p class="menu">Right-click inside this box to see the context menu!
+
+<menu type="context" id="mymenu">
+  <menuitem label="Refrescar" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+  <menu label="Compartir" onclick="confirmar()">
+      <menuitem label="Twitter" icon="images/boton-de-logo-del-twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+      <menuitem label="Facebook" icon="images/boton-del-logo-de-facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+  </menu>
+  <menuitem label="Email" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+</menu>
+
+</div>
+
+  
+
+<p><strong>Note:</strong> The contextmenu <strong>attribute</strong> only works in Firefox!</p>
+
+</body>
+</html>
