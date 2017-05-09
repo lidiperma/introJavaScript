@@ -144,6 +144,23 @@ function blue2(x) {
 }
 ;
 
+window.onload = function () {
 
+    document.getElementById("demo").onkeydown=keydownFunction;
+    document.getElementById("demo").onkeypress=keypressFunction;
+    document.getElementById("demo").onkeyup=keyupFunction;
 
+};
+
+function keydownFunction() {
+    document.getElementById("demo").style.backgroundColor = "red";
+}
+
+function keyupFunction() {
+    document.getElementById("demo").style.backgroundColor = "yellow";
+}
+
+function keypressFunction() {
+    document.getElementById("demo").style.backgroundColor = "green";
+}
 
