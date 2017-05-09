@@ -109,8 +109,9 @@ function capturaEvento(evento) {
     alert("El evento es--" + evento.type);
     alert("El elemento disparador es...:" +evento.target);
     alert("Coordenas Ventana del Navegador...:"+evento.clientX+"..."+evento.clientY);
-    alert("Coordenadas de la pantalla....:"+evento.screenX+"..."+event.screenY);
-    
+    alert("Coordenadas de la pantalla....:"+evento.screenX+"..."+evento.screenY);
+    alert("Coordenadas de la pagina....:"+evento.pageX+"..."+evento.pageY);
+
     x = document.getElementById("dispara");
     if (x.style.visibility === "hidden") {
         x.style.visibility = "visible";
