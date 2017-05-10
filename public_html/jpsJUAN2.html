@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            var gpsActivo = true;
+
+            function gps() {
+    navigator.geolocation.getCurrentPosition(gpsVer(posicion), gpsErr(error), enableHighAccuracy: false);
+}
+
+function gpsVer(pos){
+    alert(
+		'Latitud: ' + pos.coords.latitude + '\n' +
+        'Longitud: ' + pos.coords.longitude + '\n' +
+        'Altitud: ' + pos.coords.altitude + '\n' +
+        'Exactitud Coord.: ' + pos.coords.accuracy + '\n' +
+                            'Exactitud Altitud: ' + pos.coords.altitudeAccuracy + '\n' +
+                            'Heading: ' + pos.coords.heading + '\n' +
+                            'Velocidad: ' + pos.coords.speed + '\n' +
+                            'Horario: ' + pos.timestamp + '\n'
+                            );
+                }
+
+                function gpsErr(e) {
+                    alert('Error GPS: ' + e.code + '\n' + e.message);
+                }
+
+                gps();
+        </script>
+    </head>
+    <body>
+        <div>TODO write content</div>
+    </body>
+</html>
