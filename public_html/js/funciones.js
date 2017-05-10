@@ -173,9 +173,11 @@ function codigoNavegador() {
     var x = "Browser CodeName: " + navigator.appCodeName;
     var y = "Browser Name: " + navigator.appName;
     var z = "Browser Version: " +navigator.appVersion;
+    var p = "Browser producto: " +navigator.product;
     document.getElementById("codigoNavegador").innerHTML = x;
     document.getElementById("nombreNavegador").innerHTML = y;
     document.getElementById("versionNavegador").innerHTML = z;
+    document.getElementById("productoNavegador").innerHTML = p;
 }
 
 window.onload = function () {
