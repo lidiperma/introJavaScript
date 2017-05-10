@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <p>This example uses the HTML DOM to assign an "onbeforeunload" event to the window object.</p>
+
+        <p>Close this window, press F5 or click on the link below to invoke the onbeforeunload event.</p>
+
+        <a href="https://www.w3schools.com">Click here to go to w3schools.com</a>
+
+        <script>
+            window.onbeforeunload = function (event) {
+                event.returnValue = "Write something clever here..";
+                var x = event.type;
+                var y = event.target;
+                document.getElementById("info").innerHTML = "El tipo de evento es " + x;
+                document.getElementById("info2").innerHTML = "Ha sido generado por " + y;
+
+            };
+        </script>
+        <p id ="info">...</p>
+        <p id ="info2">...</p>
+    </body>
+</html>

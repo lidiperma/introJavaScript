@@ -164,3 +164,22 @@ function keypressFunction() {
     document.getElementById("demo").style.backgroundColor = "green";
 }
 
+window.onbeforeunload = function (event) {
+                event.returnValue = "¿De verdad te vas?";
+                };  
+                
+
+function codigoNavegador() {
+    var x = "Browser CodeName: " + navigator.appCodeName;
+    var y = "Browser Name: " + navigator.appName;
+    var z = "Browser Version: " +navigator.appVersion;
+    document.getElementById("codigoNavegador").innerHTML = x;
+    document.getElementById("nombreNavegador").innerHTML = y;
+    document.getElementById("versionNavegador").innerHTML = z;
+}
+
+window.onload = function () {
+
+    document.getElementById("infoBoton").onclick =codigoNavegador;
+    
+};
