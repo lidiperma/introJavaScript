@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
-<body>
+    <body>
 
-<p>Click the button to get your coordinates.</p>
+        <p>Click the button to get your coordinates.</p>
 
-<button onclick="getLocation()">Try It</button>
+        <button onclick="getLocation()">Try It</button>
 
-<p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
+        <p><strong>Note:</strong> The geolocation property is not supported in IE8 and earlier versions.</p>
 
-<p id="demo"></p>
+        <p id="demo"></p>
 
-<script>
-var x = document.getElementById("demo");
+        <script>
+            var x = document.getElementById("demo");
 
-function getLocation() {
-    if (navigator.geolocation) {
-        //el método getCurrent... necesita una funcion con un objeto
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else { 
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-}
+            function getLocation() {
+                if (navigator.geolocation) {
+                    //el método getCurrent... necesita una funcion con un objeto
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
 
-function showPosition(position) {
-    x.innerHTML = "Latitude: " + position.coords.latitude + 
-    "<br>Longitude: " + position.coords.longitude;
-}
-</script>
+            function showPosition(position) {
+                x.innerHTML = "Latitud: " + position.coords.latitude +
+                        "<br>Longitud: " + position.coords.longitude +
+                        "<br>Posicion: " + position.coords.accuracy;
+            }
+        </script>
 
-</body>
+    </body>
 </html>
