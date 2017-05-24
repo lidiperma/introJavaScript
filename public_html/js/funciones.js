@@ -188,12 +188,15 @@ window.onload = function() {
 window.onload = function() {
     
     function myResetFunction(){
+        
         document.getElementById("reseteo").onclick = resetear;
+        function resetear (){
+            var x = document.getElementById("myForm").onreset = confirmar;
+            x.onreset = confirmar();
+        }
     }
     
-    function resetear (){
-       document.getElementById("myForm").reset = confirmar; 
-        }
+    
     
     function confirmar() {
     alert("El formulario de va a resetar");

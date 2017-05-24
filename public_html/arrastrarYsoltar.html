@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="js/funciones2.js" type="text/javascript"></script>
+<style>
+.droptarget {
+    float: left; 
+    width: 100px; 
+    height: 35px;
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #aaaaaa;
+}
+</style>
+</head>
+<body>
+
+<p>This example uses the HTML DOM to assign "ondragstart", "ondrag", "ondragover" and "ondrop" events to the document object.</p>
+
+<p>Drag the p element back and forth between the two rectangles:</p>
+
+<div class="droptarget">
+  <p id="dragtarget" draggable="true">Arrastrame!</p>
+</div>
+
+<div class="droptarget">
+    
+    <img id="imgdrag" src="images/boton-de-logo-del-twitter.png" alt="Java Script" draggable="true"/>
+</div>
+
+<div class="droptarget"></div>
+
+<p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
+
+<p id="demo"></p>
+
+
+</body>
+</html>
